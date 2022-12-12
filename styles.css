@@ -4,17 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(/img/bgImage.jpg);
+  background: whitesmoke;
   height: 100vh;
   overflow-y: scroll;
   font-family: "Roboto";
-  color: white;
+  color: black;
 }
 
 /* 
@@ -32,13 +30,15 @@ NAVBAR
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
+  background: black;
+  padding: 0 10px;
 }
 .fixed-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
   position: fixed;
   width: 100%;
   padding-right: 40px;
@@ -50,7 +50,7 @@ NAVBAR
   font-weight: bold;
   color: white;
   background: transparent;
-  border: 2px solid darkslategray;
+  border: 2px solid lightgray;
   padding: 15px 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -79,7 +79,7 @@ ABOUT
 .about-img {
   width: 50%;
   height: 400px;
-  border: 2px solid lightgray;
+  border: 2px solid darkslategray;
   overflow: hidden;
 }
 .about-img img {
@@ -102,14 +102,15 @@ ABOUT
   gap: 20px;
 }
 .qualities h4 {
-  border: 1px solid lightgray;
+  border: 1px solid darkslategray;
   padding: 10px;
+  color: darkslategray;
 }
 
 hr {
-  background: transparent;
-  color: transparent;
-  height: 5px;
+  background: darkslategray;
+  color: black;
+  /* height: 5px; */
   margin: 40px 0;
 }
 /* 
@@ -176,6 +177,13 @@ MODAL
   justify-content: center;
   font-weight: bold;
   gap: 10px;
+  color: white;
+}
+
+.modal div a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
 }
 
 .close {
