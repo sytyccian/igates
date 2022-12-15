@@ -1,0 +1,865 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(white 20%, rgb(250, 218, 223) 80%);
+  background-repeat: repeat-y;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+/* 
+=======
+WRAPPER
+=======
+*/
+.wrapper {
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+
+/* 
+=========
+NAVBAR
+=========
+*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  width: 100%;
+  height: 70px;
+  padding: 0 10px;
+  z-index: 1000;
+  position: relative;
+}
+
+.no-true {
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  position: fixed;
+  border: none;
+  outline: none;
+  top: 24px;
+  right: 50px;
+}
+.true {
+  background: black;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: fixed;
+  top: 24px;
+  right: 50px;
+  border: none;
+  outline: none;
+}
+
+/* 
+========
+INTRO
+========
+*/
+.intro {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.intro-details h1 {
+  font-size: 60px;
+  border-bottom: 1px solid darkslategray;
+  padding-bottom: 15px;
+}
+.intro-details p {
+  color: darkslategray;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.page-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+.page-link span {
+  background: black;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+}
+.page-link:hover {
+  color: blue;
+}
+.page-link:hover span {
+  color: blue;
+  border: 1px solid blue;
+  background: transparent;
+}
+.intro-contact {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+.intro-contact a {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: 1px solid black;
+  padding: 15px;
+  transition: all 0.3s linear;
+}
+.intro-contact a:hover {
+  background: black;
+  color: white;
+}
+
+/* 
+=========
+ABOUT
+=========
+*/
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 50px 0;
+}
+.about h1 {
+  font-size: 40px;
+}
+.about-writeup {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-writeup p {
+  font-size: 20px;
+}
+.about-content {
+  width: 50%;
+}
+.content-center {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+.content-center div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.content-center div img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px black;
+}
+
+.content-center div p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.content-center div a {
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  font-size: 14px;
+  transition: all 0.2s linear;
+}
+.content-center div a:hover {
+  color: white;
+  background: black;
+}
+
+.previous {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.next {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.current {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 
+=========
+PARTNERS
+=========
+*/
+.partners {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  padding-top: 50px;
+}
+.partners-btn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.partners-btn button {
+  font-size: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+}
+.partners-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partner-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+}
+.partner-details div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.partner-details div img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px black;
+}
+/* 
+=========
+PROJECTS
+=========
+*/
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 150px 0 20px 0;
+}
+.projects h1 {
+  font-size: 40px;
+}
+.projects h4 {
+  font-size: 18px;
+}
+.projects-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 31.5%;
+}
+.project-details img {
+  width: 100%;
+  filter: brightness(60%);
+  border-radius: 10px;
+  box-shadow: 0 3px 5px black;
+}
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* 
+=========
+PRODUCTS
+=========
+*/
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px 0 20px 0;
+}
+.products h1 {
+  font-size: 40px;
+}
+.products > p {
+  font-size: 20px;
+}
+.products-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.products-center div {
+  width: 31.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.products-center div img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px black;
+  margin-bottom: 5px;
+}
+/* 
+==========
+SUBSCRIBE
+==========
+*/
+.subscribe {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.subscribe-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.subscribe-details h1 {
+  font-size: 40px;
+}
+.subscribe-details p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.subscribe-details input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  padding: 15px 0;
+  width: 80%;
+  border-bottom: 2px solid black;
+}
+.subscribe-icons {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  gap: 15px;
+}
+.subscribe-btns {
+  display: flex;
+  gap: 20px;
+}
+.subscribe-btns button {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+/* 
+=========
+CONTACT
+=========
+*/
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+.contact-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-info h1 {
+  font-size: 40px;
+}
+.contact-info section {
+  display: flex;
+  justify-content: center;
+}
+.contact-info section aside {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+.contact-info p {
+  font-size: 20px;
+}
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+form input {
+  padding: 10px;
+  border: 2px solid darkslategray;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 18px;
+}
+textarea {
+  border: 2px solid darkslategray;
+  border-radius: 4px;
+  background: transparent;
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+}
+
+.contact-form button {
+  padding: 15px;
+  color: black;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: all 0.3s linear;
+}
+.contact-form button:hover {
+  background: black;
+  color: white;
+}
+
+/* 
+=======
+MODAL
+=======
+*/
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  height: 100vh;
+  width: 95%;
+  position: fixed;
+  top: 0;
+}
+.no-modal {
+  display: none;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* 
+============
+MEDIA QUERY
+============
+*/
+@media (max-width: 1200px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  /* 
+  INTRO
+  */
+  .intro-details h1 {
+    font-size: 40px;
+  }
+  .intro-details p {
+    font-size: 16px;
+  }
+  /* 
+ABOUT
+*/
+  .about h1 {
+    font-size: 30px;
+  }
+  .about-writeup p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  /* 
+  PROJECTS
+  */
+  .projects h1 {
+    font-size: 30px;
+  }
+  .projects h4 {
+    font-size: 15px;
+  }
+  .project-details {
+    width: 30.5%;
+  }
+  .project-info {
+    padding: 10px;
+    font-size: 13px;
+  }
+  /* 
+  PRODUCTS
+  */
+  .products h1 {
+    font-size: 30px;
+  }
+  .products > p {
+    font-size: 15px;
+  }
+  .products-center div {
+    width: 30.5%;
+  }
+
+  /* 
+  SUBSCRIBE
+  */
+  .subscribe-details h1 {
+    font-size: 30px;
+  }
+  .subscribe-details p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .subscribe-details h3 {
+    font-size: 16px;
+  }
+  .subscribe-details input {
+    font-size: 16px;
+  }
+  .subscribe-icons h2 {
+    font-size: 16px;
+  }
+
+  /* 
+  CONTACT
+  */
+  .contact-info h1 {
+    font-size: 30px;
+  }
+  .contact-info p {
+    font-size: 16px;
+  }
+  .contact-info h2,
+  .contact-info h3 {
+    font-size: 16px;
+  }
+  form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  /* 
+  INTRO
+  */
+  .intro {
+    flex-direction: column;
+  }
+
+  .intro-details {
+    width: 100%;
+  }
+  .intro-contact {
+    width: 100%;
+  }
+
+  /* 
+ABOUT
+*/
+
+  .about {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .about-writeup {
+    width: 100%;
+  }
+
+  .about-content {
+    display: block;
+    width: 100%;
+    padding-top: 60px;
+    height: 500px;
+  }
+  .content-center {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    position: relative;
+  }
+  /* 
+PARTNERS
+*/
+
+  .partners {
+    display: block;
+    height: auto;
+  }
+
+  .partners-btn {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partners-content {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .partner-details {
+    height: 100%;
+    border-radius: 10px;
+  }
+  .partner-details div {
+    height: 80%;
+  }
+  .partner-details div img {
+    height: 100%;
+  }
+
+  /*
+   PROJECTS
+  */
+  .project-details {
+    width: 47%;
+  }
+  /* 
+  PRODUCTS
+  */
+  .products-center div {
+    width: 47%;
+  }
+  /* 
+SUBSCRIBE
+*/
+  .subscribe {
+    display: block;
+    height: 80vh;
+  }
+  .subscribe-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+
+  .subscribe-details input {
+    width: 100%;
+  }
+  .subscribe-icons {
+    width: 100%;
+    display: block;
+  }
+  .subscribe-icons h2 {
+    margin-bottom: 15px;
+  }
+
+  /* 
+CONTACT
+*/
+
+  .contact {
+    height: auto;
+    display: block;
+  }
+  .contact-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+  .contact-form {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  form {
+    width: 100%;
+  }
+}
+@media (max-width: 570px) {
+  /* 
+=========
+NAVBAR
+=========
+*/
+  .wrapper {
+    overflow: hidden;
+  }
+
+  /* 
+  PROJECTS
+  */
+
+  .projects h1 {
+    font-size: 20px;
+  }
+  .projects h4 {
+    font-size: 14px;
+  }
+
+  .project-details {
+    width: 100%;
+  }
+
+  /* 
+  ABOUT
+  */
+
+  .content-center {
+    width: 100%;
+  }
+
+  /* 
+PARTNERS
+*/
+  .partners-content {
+    height: 400px;
+  }
+  .partner-details {
+    width: 100%;
+  }
+
+  /* 
+PRODUCTS
+*/
+  .products {
+    gap: 20px;
+  }
+  .products h1 {
+    font-size: 20px;
+  }
+  .products > p {
+    font-size: 15px;
+  }
+  .products-center {
+    gap: 20px;
+  }
+  .products-center div {
+    width: 100%;
+    gap: 5px;
+  }
+
+  /* 
+  SUBSCRIBE
+  */
+  .subscribe h1 {
+    font-size: 20px;
+  }
+
+  /* 
+  CONTACT
+  */
+  .contact {
+    padding-top: 50px;
+  }
+  .contact h1 {
+    font-size: 20px;
+  }
+  .contact p {
+    font-size: 14px;
+  }
+  .contact h3 {
+    font-size: 14px;
+  }
+}
