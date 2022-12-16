@@ -1,28 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { aboutData } from "../../data/aboutData"
-
-const SingleAbout = () => {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    if (count < 0) {
-      setCount(aboutData.length - 1)
-    }
-    if (count === aboutData.length) {
-      setCount(0)
-    }
-  }, [count])
-
-  useEffect(() => {
-    let intervalId = setInterval(() => {
-      setCount(count + 1)
-    }, 4000)
-
-    return () => {
-      clearInterval(intervalId)
-    }
-  }, [count])
-
+const SingleAbout = ({ count, aboutData }) => {
   return (
     <div className='content-center'>
       {aboutData.map((data, index) => {

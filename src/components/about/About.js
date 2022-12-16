@@ -1,8 +1,30 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { TfiAngleDown } from "react-icons/tfi"
 import SingleAbout from "./SingleAbout"
+import { aboutData } from "../../data/aboutData"
 
 const About = () => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (count < 0) {
+      setCount(aboutData.length - 1)
+    }
+    if (count === aboutData.length) {
+      setCount(0)
+    }
+  }, [count])
+
+  useEffect(() => {
+    let intervalId = setInterval(() => {
+      setCount(count + 1)
+    }, 4000)
+
+    return () => {
+      clearInterval(intervalId)
+    }
+  }, [count])
+
   return (
     <div className='about' id='about'>
       <div className='about-writeup'>
@@ -23,7 +45,18 @@ const About = () => {
         </a>
       </div>
       <div className='about-content'>
-        <SingleAbout />
+        <SingleAbout count={count} aboutData={aboutData} />
+        <div style={{ textAlign: "center" }}>
+          {aboutData.map((data, index) => {
+            return (
+              <button
+                className={`abt-btn ${count === index && "active"}`}
+                key={index}
+                onClick={() => setCount(index)}
+              ></button>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
