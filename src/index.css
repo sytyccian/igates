@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(250, 244, 245);
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+}
+
+.icon-box a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.icon-box a:hover {
+  color: orangered;
+}
+#contact-link {
+  background: orangered;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid transparent;
+}
+#contact-link:hover {
+  background: transparent;
+  color: orangered;
+  border: 1px solid orangered;
+}
+.icons {
+  text-decoration: none;
+  background: orangered;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.icons:hover {
+  background: transparent;
+  border: 1px solid orangered;
+  color: orangered;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: none;
+}
+
+button {
+  padding: 15px;
+  background: orangered;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  border: 1px solid orangered;
+  color: orangered;
+  background: transparent;
+}
+
+.sidebar {
+  height: 100vh;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: rgb(250, 218, 223);
+  box-shadow: 0 0 10px black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transform: translateX(-150%);
+  transition: all 0.3s linear;
+}
+
+.show-sidebar {
+  transform: translateX(0%);
+}
+
+.sidebar a {
+  text-decoration: none;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}
+.sidebar a:hover {
+  color: orangered;
+  transform: translateX(5px);
+}
+
+/* 
+TOGGLE
+*/
+.toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  right: 50px;
+}
+.toggle span {
+  width: 25px;
+  background: black;
+  height: 3px;
+  border-radius: 4px;
+  position: absolute;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  transform: translateY(-8px);
+}
+.toggle span:nth-child(2) {
+  transform: translateY(8px);
+}
+.toggle-it span:nth-child(3) {
+  transform: translateX(100px);
+}
+.toggle-it span:nth-child(1) {
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle-it span:nth-child(2) {
+  transform: translateY(0px) rotate(135deg);
+}
+
+/* FADE IN SCROLL FUNCTIONALITY */
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s linear;
+}
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
