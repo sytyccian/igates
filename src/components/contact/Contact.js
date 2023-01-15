@@ -81,7 +81,7 @@ const Contact = () => {
               component='p'
               sx={{ fontWeigh: "bold", fontSize: { xs: "16px", sm: "20px" } }}
             >
-              112 Aba Road Garrison, Port Harcourt
+              Horizon 2 Ext, Lekki, Lagos
             </Typography>
           </Box>
           {/* End of Location */}

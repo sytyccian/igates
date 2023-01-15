@@ -14,7 +14,13 @@ const Form = () => {
       <input type='text' placeholder='Name' />
       <input type='email' placeholder='Email' />
       <input type='text' placeholder='Subject' />
-      <textarea name='' id='' cols='30' rows='10'></textarea>
+      <textarea
+        name=''
+        id=''
+        cols='30'
+        rows='10'
+        placeholder='Message'
+      ></textarea>
       <button>SEND MESSAGE</button>
     </Box>
   )
