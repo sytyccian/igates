@@ -48,7 +48,7 @@ const Contact = () => {
               component='p'
               sx={{ fontWeigh: "bold", fontSize: { xs: "16px", sm: "20px" } }}
             >
-              info@igates.com.ng
+              c@igates.io
             </Typography>
           </Box>
           {/* End of Email */}
