@@ -1,6 +1,7 @@
 import Enugu from "../images/Enugu State Govt.PNG"
 import Godfrey from "../images/Godfrey.PNG"
 import NSPM from "../images/NSPM.PNG"
+import loyz from "../images/loyz.png"
 
 export const projectsData = [
   {
@@ -39,5 +40,12 @@ export const projectsData = [
       "https://images.pexels.com/photos/9628799/pexels-photo-9628799.jpeg?cs=srgb&dl=pexels-ivan-samkov-9628799.jpg&fm=jpg&h=200&w=200&fit=crop&_gl=1*2fbtr9*_ga*MTA2NTE3MzE2NC4xNjYwNjYzMTYw*_ga_8JE65Q40S6*MTY3MTYyMzkyOC40Ni4xLjE2NzE2MjUwNzguMC4wLjA.",
     info: "Design/deployment and maintenance of a healthcare solution",
     img: "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?cs=srgb&dl=pexels-evg-kowalievska-1170979.jpg&fm=jpg&h=427&w=640&fit=crop&_gl=1*qmatak*_ga*MTA2NTE3MzE2NC4xNjYwNjYzMTYw*_ga_8JE65Q40S6*MTY3MDkzMzM4Ni4yOS4xLjE2NzA5MzU2MDcuMC4wLjA.",
+  },
+  {
+    id: 5,
+    name: "LOYZ ENERGY GROUPS",
+    avatar: loyz,
+    info: "Design and Deployment of a maritime integrated database application",
+    img: "https://images.pexels.com/photos/70418/pexels-photo-70418.jpeg?cs=srgb&dl=pexels-mali-maeder-70418.jpg&fm=jpg&w=640&h=427&_gl=1*1i9f7h*_ga*MTA2NTE3MzE2NC4xNjYwNjYzMTYw*_ga_8JE65Q40S6*MTY3MzgzMDQzMy41MC4xLjE2NzM4MzA2MDMuMC4wLjA.",
   },
 ]

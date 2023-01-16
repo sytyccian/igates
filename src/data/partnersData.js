@@ -11,7 +11,7 @@ export const partnersData = [
   },
   {
     id: 2,
-    name: "Loyz",
+    name: "Loyz Energy",
     img: loyz,
   },
   {

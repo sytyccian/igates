@@ -42,7 +42,7 @@ const Clients = () => {
                       width: "70px",
                       height: "70px",
                       borderRadius: "10px",
-                      boxShadow: "0 0 8px black",
+                      boxShadow: "0 0 3px black",
                     }}
                   />
                 </Box>
