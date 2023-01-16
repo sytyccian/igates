@@ -29,6 +29,7 @@ const Partners = () => {
               lg={3}
               md={4}
               sm={6}
+              xs={12}
               key={id}
               sx={{
                 textAlign: "center",
@@ -43,6 +44,7 @@ const Partners = () => {
                 <img
                   style={{
                     width: "100%",
+                    height: "100%",
                   }}
                   src={img}
                   alt={name}

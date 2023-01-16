@@ -29,7 +29,7 @@ export const projectsData = [
     id: 4,
     name: "NSPM",
     avatar: NSPM,
-    info: "Bank note tracker Application",
+    info: "Development and deployment of a currency generation and handling system",
     img: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?cs=srgb&dl=pexels-pixabay-164527.jpg&fm=jpg&h=427&w=640&fit=crop&_gl=1*mmahhl*_ga*MTA2NTE3MzE2NC4xNjYwNjYzMTYw*_ga_8JE65Q40S6*MTY3MDkzMzM4Ni4yOS4xLjE2NzA5MzU1MzUuMC4wLjA.",
   },
   {

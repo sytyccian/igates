@@ -21,7 +21,7 @@ const Form = () => {
         rows='10'
         placeholder='Message'
       ></textarea>
-      <button>SEND MESSAGE</button>
+      <button onClick={() => window.location.reload()}>SEND MESSAGE</button>
     </Box>
   )
 }

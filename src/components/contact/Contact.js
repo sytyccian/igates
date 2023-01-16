@@ -114,7 +114,7 @@ const Contact = () => {
               component='p'
               sx={{ fontWeigh: "bold", fontSize: { xs: "16px", sm: "20px" } }}
             >
-              + 234 9093 542 599
+              + 234 8169 084 453
             </Typography>
           </Box>
           {/* End of Telephone */}
